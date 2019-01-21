@@ -1,0 +1,11 @@
+dubbo:
+  application:
+    name: BootUserServiceProvider
+  registry:   # 注册中心地址
+    address: 192.168.50.232:2181
+    protocol: zookeeper
+  protocol:   #指定通信协议
+    port: 20880
+    name: dubbo
+  monitor:    # 监控中心
+    protocol: registry

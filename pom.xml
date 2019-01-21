@@ -12,6 +12,8 @@
         <module>UserService</module>
         <module>OrderService</module>
         <module>DubboInterface</module>
+        <module>BootUserService</module>
+        <module>BootOrderService</module>
     </modules>
 
 
