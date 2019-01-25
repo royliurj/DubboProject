@@ -13,9 +13,9 @@ import java.util.stream.Collectors;
  * @Date: 2019/1/18 15:54
  */
 //暴露服务
-@com.alibaba.dubbo.config.annotation.Service(version = "1.0.0")
+@com.alibaba.dubbo.config.annotation.Service(version = "2.0.0")
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl2 implements UserService {
 
     private final List<UserAddress> list = new ArrayList<UserAddress>();
 
@@ -28,8 +28,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserAddress> getUserAddressList(final Integer userId) {
+        System.out.println("getUserAddressList new");
 
-        System.out.println("getUserAddressList old");
+        System.out.println("UserService 1");
 
         System.out.println("接收到请求：UserId = " + userId);
         List<UserAddress> result = list.stream().filter(u -> u.getUserId().equals(userId)).collect(Collectors.toList());

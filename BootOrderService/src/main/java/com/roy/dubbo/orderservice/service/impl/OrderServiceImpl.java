@@ -18,7 +18,7 @@ public class OrderServiceImpl implements OrderService {
 
 //    @Autowired
 //  从远程注册中心获取服务
-    @Reference
+    @Reference(version = "2.0.0", stub = "com.roy.dubbo.service.impl.UserServiceStub", loadbalance = "random")
     UserService userService;
 
     public List<UserAddress> initOrder(Integer userId) {
